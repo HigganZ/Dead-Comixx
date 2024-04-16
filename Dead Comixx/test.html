@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .tooltip {
+        visibility: hidden;
+      }
+      .tooltippic:hover {
+      }
+      .wilder-g:hover {
+        visibility: visible;
+      }
+    </style>
+  </head>
+<title>Sort a HTML List Alphabetically</title>
+<body>
+
+<p>Click the button to sort the list alphabetically:</p>
+<button>Sort</button>
+
+<ul onload="sortList()" id="id01">
+  <li>
+    <a class="wilder-g"  href="https://www.youtube.com/results?search_query=Gene+Wilder">Gene Wilder
+    <span class="tooltip">
+      <img class="tooltippic" src= "images/Gene-Wilder.jpg">
+    </span>
+  </a>
+  </li>
+  <li>Sagat</li>
+  <li>Farley</li>
+  <li>Williams</li>
+  <li>Carlin</li>
+  <li>
+    <a class="murphy-e" href="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExcG5hdWd1N3ZmNnE5M3RiNGI5ajRqOTcwNWV0Z3JhbnVqNzJ4dHBicyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Vuw9m5wXviFIQ/giphy.gif">Murphy E</a>
+  </li>
+  <li>Pryor</li>
+  <li>
+    <a class="mac-b" href="https://www.youtube.com/results?search_query=Bernie+Mac">Mac</a>
+  </li>
+  <li>Gallagher</li>
+  <li>Murphy C</li>
+  <li>
+    <a class="candy-j" href="https://www.youtube.com/results?search_query=John+Candy">Candy</a>
+  </li>
+</ul>
+
+  
+
+<script>
+
+const sorted = sortList();
+function sortList() {
+  var list, i, switching, b, shouldSwitch;
+  list = document.getElementById("id01");
+  switching = true;
+  /* Make a loop that will continue until
+  no switching has been done: */
+  while (switching) {
+    // start by saying: no switching is done:
+    switching = false;
+    b = list.getElementsByTagName("LI");
+    // Loop through all list-items:
+    for (i = 0; i < (b.length - 1); i++) {
+      // start by saying there should be no switching:
+      shouldSwitch = false;
+      /* check if the next item should
+      switch place with the current item: */
+      if (b[i].innerHTML.toLowerCase() > b[i + 1].innerHTML.toLowerCase()) {
+        /* if next item is alphabetically
+        lower than current item, mark as a switch
+        and break the loop: */
+        shouldSwitch = true;
+        break;
+      }
+    }
+    if (shouldSwitch) {
+      /* If a switch has been marked, make the switch
+      and mark the switch as done: */
+      b[i].parentNode.insertBefore(b[i + 1], b[i]);
+      switching = true;
+    }
+  }
+}
+</script>
+
+</body>
+</html>

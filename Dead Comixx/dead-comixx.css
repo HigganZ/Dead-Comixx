@@ -1,0 +1,101 @@
+a {
+  text-decoration: none;
+  font-family: Arial;
+  display: inline-block;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  
+}
+
+a:hover {
+  color: red;
+}
+
+.id01 {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  list-style-type: none;
+}
+
+.test {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: white;
+}
+
+p {
+  font-family: Arial;
+}
+
+.intro {
+  font-size: 20px;
+  text-align: center;
+  background-color: black;
+  color: white;
+  margin-top: 0;
+}
+
+.tooltip {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-family: Arial;
+
+}
+
+.tooltip .tooltippic {
+  visibility: hidden;
+  position: absolute;
+  text-align: center;
+  font-size: 24px;
+  
+}
+
+.tooltip:hover .tooltippic {
+  visibility: visible;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  background-color: white;
+}
+
+.hamburger-menu {
+  height: 150px;
+  width: 150px;
+}
+
+.header-image {
+  display: flex;
+  flex: 1;
+  background-color: white;
+  height: 150px; 
+  max-width: 2000px;
+  min-width: 600px;
+ 
+}
+.menu-button {
+  display: flex;
+  cursor: pointer;
+  padding: 0;
+  border: 0;
+}
+.list {
+  margin-top: 200px;
+}
+.comic-image {
+  max-width: 200px;
+  max-height: 200px;
+}
+.comic-info {
+}
+.comic-links {
+  align-items: center;
+  display: flex;
+  width: 200px;
+}

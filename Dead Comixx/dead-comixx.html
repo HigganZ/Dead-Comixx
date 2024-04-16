@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Dead Comixx
+    </title>
+    <link rel="stylesheet" href="dead-comixx.css">
+  </head>
+  <body>
+    <div class="test">
+      <div class="header">
+        <button class="menu-button">
+          <img class="hamburger-menu" src="images/hamburger-menu.jpg">
+        </button>
+        <img class="header-image"  src="images/web-name.jpg">
+        <button class="menu-button">
+          <img class="hamburger-menu" src="images/IMG_6227.jpg">
+        </button>
+      </div>
+      <p class="intro">
+        An anthology of those who dedicated their lives to giving the eternal gift of laughter.  Gone forever, forgotten never.
+      </p>
+    </div>
+    <div>
+      
+    </div>
+
+    <div onload="sortList()" class="list">
+    
+
+      <ul class="id01" id="id01">
+        <li class="tooltip">
+          Richard Pryor
+          <div class="comic-info">
+            <img class="comic-image" src="images/Richard-Pryor.jpg">
+            <div class="comic-links">
+              <a href="https://www.youtube.com/results?search_query=Richard+Pryor">Content</a>
+              <a href="https://en.wikipedia.org/wiki/Richard_Pryor">Bio</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="tooltip">
+          Bob Saget
+          <div class="comic-info">
+            <img class="comic-image" src="images/Bob-Saget.jpg">
+            <div>
+              <a href="https://www.youtube.com/results?search_query=bob+saget+stand+up">Content</a>
+              <a href="https://en.wikipedia.org/wiki/Bob_Saget">Bio</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="tooltip">
+          Charlie Murphy
+          <div class="comic-info">
+            <img class="comic-image" src="images/Charlie Murphy.jpg">
+            <div>
+              <a href="https://www.youtube.com/results?search_query=Charlie+Murphy+comedy">Content</a>
+              <a href="https://en.wikipedia.org/wiki/Charlie_Murphy_(actor)">Bio</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="tooltip">
+          Robin Williams
+          <div class="comic-info">
+            <img class="comic-image" src="images/Robin-Williams.jpg">
+            <div>
+              <a href="https://www.youtube.com/results?search_query=Robin+Williams+comedy">Content</a>
+              <a href="https://en.wikipedia.org/wiki/Robin_Williams">Bio</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="tooltip">
+          George Carlin
+          <div class="comic-info">
+            <img class="comic-image" src="images/George-Carlin.jpg">
+            <div>
+              <a href="https://www.youtube.com/results?search_query=George+Carlin">Content</a>
+              <a href="https://en.wikipedia.org/wiki/George_Carlin">Bio</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="tooltip">
+          Eddie Murphy
+          <span class="tooltippic">
+            <a  href="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExcG5hdWd1N3ZmNnE5M3RiNGI5ajRqOTcwNWV0Z3JhbnVqNzJ4dHBicyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Vuw9m5wXviFIQ/giphy.gif">
+              <img src= "images/Eddie Murphy.jpg">
+            </a>
+          </span>         
+        </li>   
+      </ul>
+    </div>
+    <script>
+      const sorted = sortList();
+      function sortList() {
+        var list, i, switching, b, shouldSwitch;
+        list = document.getElementById("id01");
+        switching = true;
+        while (switching) {
+          switching = false;
+          b = list.getElementsByTagName("LI");
+          for (i = 0; i < (b.length - 1); i++) {
+            shouldSwitch = false;
+            if (b[i].innerHTML.toLowerCase() > b[i + 1].innerHTML.toLowerCase()) {
+              shouldSwitch = true;
+              break;
+            }
+          }
+          if (shouldSwitch) {
+            b[i].parentNode.insertBefore(b[i + 1], b[i]);
+            switching = true;
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
+

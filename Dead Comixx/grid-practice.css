@@ -1,0 +1,18 @@
+.comedian-grid {
+  
+  
+  
+}
+
+.comedian-info {
+
+}
+
+.comedian-image {
+  width: 175px;
+}
+.id01 {
+  background-color: lightblue;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+}
