@@ -7,8 +7,12 @@ a {
   
 }
 
-a:hover {
-  color: red;
+p {
+  font-family: Arial;
+}
+
+.input {
+  float: right;
 }
 
 .id01 {
@@ -23,12 +27,9 @@ a:hover {
   top: 0;
   right: 0;
   left: 0;
-  background-color: white;
 }
 
-p {
-  font-family: Arial;
-}
+
 
 .intro {
   font-size: 20px;
