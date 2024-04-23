@@ -1,7 +1,8 @@
 a {
   text-decoration: none;
   font-family: Arial;
-  display: inline-block;
+  font-weight: normal;
+  display: flex;
   padding-top: 2px;
   padding-bottom: 2px;
   
@@ -16,9 +17,8 @@ p {
 }
 
 .id01 {
-  display: grid;
-  grid-template-columns: auto auto auto auto auto;
-  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .test {
@@ -41,21 +41,14 @@ p {
 
 .tooltip {
   margin-top: 5px;
-  margin-bottom: 5px;
+  margin-bottom: 50px;
+  margin-right: 10px;
+  margin-left: 10px;
   font-family: Arial;
-
-}
-
-.tooltip .tooltippic {
-  visibility: hidden;
-  position: absolute;
   text-align: center;
-  font-size: 24px;
-  
-}
-
-.tooltip:hover .tooltippic {
-  visibility: visible;
+  display: block;
+  font-weight: bold;
+  color: blue;
 }
 
 .header {
@@ -97,6 +90,7 @@ p {
 }
 .comic-links {
   align-items: center;
+  justify-content: space-around;
   display: flex;
   width: 200px;
 }
