@@ -2,9 +2,10 @@
 body {
   background-image: url('images/background.jpg');
   background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-
-
 
 a {
   text-decoration: none;
@@ -14,17 +15,10 @@ a {
   display: flex;
   padding-top: 2px;
   padding-bottom: 2px;
-  
 }
 
 p {
   font-family: Arial;
-}
-
-.input {
-  float: right;
-  justify-content: center;
-  display: inline-block;
 }
 
 .id01 {
@@ -38,15 +32,6 @@ p {
   top: 0;
   right: 0;
   left: 0;
-}
-
-.background {
-  position: fixed;
-}
-
-.background-image {
-  justify-content: center;
-  align-items: center;
 }
 
 .intro {
@@ -91,19 +76,24 @@ p {
   min-width: 600px;
  
 }
+
 .menu-button {
   display: flex;
   cursor: pointer;
   padding: 0;
   border: 0;
 }
+
 .list {
   margin-top: 200px;
+
 }
+
 .comic-image {
   max-width: 150px;
   max-height: 150px;
 }
+
 .comic-links {
   align-items: center;
   justify-content: space-around;
