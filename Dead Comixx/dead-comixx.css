@@ -2,9 +2,9 @@
 body {
   background-image: url('images/background.jpg');
   background-attachment: fixed;
-  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-size: contain;
 }
 
 a {
@@ -43,10 +43,7 @@ p {
 }
 
 .tooltip {
-  margin-top: 5px;
-  margin-bottom: 50px;
-  margin-right: 10px;
-  margin-left: 10px;
+  margin: 5px 20px 50px 20px;
   font-family: Arial;
   text-align: center;
   display: block;
@@ -90,8 +87,10 @@ p {
 }
 
 .comic-image {
-  max-width: 150px;
-  max-height: 150px;
+  height: 200px;
+  width: 150px;
+  object-fit: cover;
+  border-radius: 5px;
 }
 
 .comic-links {
